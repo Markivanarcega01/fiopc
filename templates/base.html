@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>FIOPC</title>
+    {% load static %}
+</head>
+
+<body>
+    {% block maincontent%}
+    {% endblock %}
+    This is the parent page
+    <script src="{% static 'index.js' %}"></script>
+    <link rel = "stylesheet" href = "{% static 'style.css' %}">
+</body>
+</html>
