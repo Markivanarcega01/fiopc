@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>FIOPC</title>
     {% load static %}
 </head>
@@ -51,6 +52,28 @@
 
     {% block maincontent%}
     {% endblock %}
+
+    <footer>
+        <div class="company-name">
+          <img src="/static/images/footer-title.png" alt="Flow Industries OPC">
+        </div>
+        <div class="info">
+          <div class="col1">
+            <i class='bx bxs-phone'></i>(02) 8296 2844<br>
+            <i class='bx bxs-mobile'></i>+639-776-597-815
+          </div>
+          <div class="col2">
+            <i class='bx bxs-map'></i>Unit F 6/F Westgate Tower Condo, Investment Dr., Madrigal Business Park, Ayala-Alabang, Muntinlupa 1780
+          </div>
+          <div class="col3">
+            <i class='bx bxl-linkedin-square' ></i>Flow Industries OPC<br>
+            <i class='bx bxl-facebook-square' ></i>FlowIndustriesOPC
+          </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright 2025 &copy; FLOW INDUSTRIES OPC. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script src="{% static 'index.js' %}"></script>
     <link rel = "stylesheet" href = "{% static 'style.css' %}">
