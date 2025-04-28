@@ -9,3 +9,7 @@ function toggleMenu(element) {
   const nav = document.querySelector('.nav-links-mobile');
   nav.classList.toggle("show");
 }
+
+function toggleCollapse(element) {
+  element.parentElement.classList.toggle('active');
+}

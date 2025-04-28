@@ -5,6 +5,8 @@ body {
   background-color: #f4f4f4;
   color: #333;
 }
+
+/* - - - - - NAVBAR - - - - - */
 .navbar-body {
   background: transparent;
   margin: 0;
@@ -167,6 +169,8 @@ nav .nav-links-mobile li a:hover {
     height: 48px;
   }
 }
+
+/* - - - - - FOOTER - - - - - */
 footer {
   margin: 64px 0 0 0;
   width: 100%;
@@ -190,6 +194,9 @@ footer .info {
   gap: 20px;
   padding: 20px;
   flex-wrap: wrap;
+}
+footer .info i {
+  margin-right: 6px;
 }
 footer .col1,
 footer .col2,
@@ -263,4 +270,76 @@ footer .copyright {
   footer .info .col2 {
     margin: 12px 0;
   }
+}
+
+/* - - - - - CAREERS - - - - - */
+.careers h1 {
+  font-size: 48px;
+  font-weight: 900;
+  text-align: center;
+  margin: 32px 0;
+  color: #03045e;
+  text-shadow: 2px 2px 2px #9a9a9a;
+  text-transform: uppercase;
+}
+.collapsible-container {
+  background: #caf0f8;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 75%;
+  margin: 0 auto 12px auto;
+  transition: all 0.3s ease;
+}
+.collapsible-header {
+  background: #caf0f8;
+  padding: 15px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.collapsible-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+.company-description {
+  padding: 0 20px;
+  background: #caf0f8;
+  font-size: 14px;
+}
+.collapsible-content {
+  padding: 20px;
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+.collapsible-container.active .collapsible-content {
+  display: block;
+}
+.arrow {
+  transition: transform 0.3s ease;
+}
+.collapsible-container.active .arrow {
+  transform: rotate(180deg);
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.apply-button {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #4c6ef5;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.apply-button:hover {
+  background-color: #3b5bdb;
 }
