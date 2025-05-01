@@ -273,6 +273,10 @@ footer .copyright {
 }
 
 /* - - - - - CAREERS - - - - - */
+.careers {
+  min-height: 1000px;
+  max-height: auto;
+}
 .careers h1 {
   font-size: 48px;
   font-weight: 900;
@@ -288,7 +292,7 @@ footer .copyright {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   overflow: hidden;
   width: 75%;
-  margin: 0 auto 12px auto;
+  margin: 0 auto 24px auto;
   transition: all 0.3s ease;
 }
 .careers .collapsible-header {
