@@ -31,3 +31,16 @@ function closeModal() {
 function closeSuccessModal() {
   document.getElementById('successModal').style.display = 'none';
 }
+
+// careers page modal form submission
+function openModal(jobId) {
+  document.getElementById("modalOverlay").style.display = "flex";
+  document.getElementById("job_id_input").value = jobId;
+}
+function closeModal() {
+  document.getElementById("modalOverlay").style.display = "none";
+}
+
+function closeSuccessModal() {
+  document.getElementById("successModal").style.display = "none";
+}

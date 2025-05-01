@@ -1,4 +1,5 @@
 from django.contrib import admin
-from .models import Application  # Import your model
+from .models import JobOpportunity, Application
 
+admin.site.register(JobOpportunity)
 admin.site.register(Application)

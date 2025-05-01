@@ -4,42 +4,39 @@
 <div class="careers">
   <h1>Careers</h1>
 
-  {% comment %} JOB OPPORTUNITY 1 {% endcomment %}
+  {% for job in jobs %}
   <div class="collapsible-container">
     <div class="collapsible-header" onclick="toggleCollapse(this)">
-      <h2>Flow Industries OPC</h2>
+      <h2>{{ job.company_name }}</h2>
       <span class="arrow"><img src="/static/images/down-arrow.png/"></span>
     </div>
     
     <div class="company-description">
-      <p>We are a dedicated wastewater management company committed to protecting the environment through sustainable solutions. We are looking for passionate and responsible individuals to join our team.</p>
+      <p>{{ job.description }}</p>
     </div>
-  
+
     <div class="collapsible-content">
-      <p><strong>Job Title:</strong> Wastewater Treatment Operator (Technician / Specialist)</p>
+      <p><strong>Job Title:</strong> {{ job.job_title }}</p>
       
       <p><strong>Job Qualifications:</strong></p>
       <ul>
-        <li>High school diploma or equivalent (required)</li>
-        <li>Degree or certification in Environmental Science, Engineering</li>
-        <li>Previous experience in wastewater treatment or a related industry</li>
-        <li>Good communication and problem-solving skills</li>
-        <li>Strong attention to detail and ability to follow safety protocols</li>
-        <li>Willingness to learn and undergo training if necessary</li>
+        {% for q in job.qualifications.splitlines %}
+          <li>{{ q }}</li>
+        {% endfor %}
       </ul>
   
       <p><strong>Job Requirements:</strong></p>
       <ul>
-        <li>Must be at least 18 years old</li>
-        <li>Physically fit and able to work in various environmental conditions</li>
-        <li>Ability to work independently and as part of a team</li>
-        <li>Flexible schedule; willing to work weekends, holidays, or on-call shifts</li>
-        <li>Valid driver's license (required for certain positions)</li>
+        {% for r in job.requirements.splitlines %}
+          <li>{{ r }}</li>
+        {% endfor %}
       </ul>
-  
-      <a href="#" class="apply-button" onclick="openModal()">APPLY NOW</a>
+
+      <a href="#" class="apply-button" onclick="openModal({{ job.id }})">APPLY NOW</a>
     </div>
   </div>
+{% endfor %}
+
   
   {% comment %} Application Form {% endcomment %}
   <div class="modal-overlay" id="modalOverlay">
@@ -48,6 +45,7 @@
       <h2>APPLICATION FORM</h2>
       <form action="{% url 'careers:index' %}" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
+        <input type="hidden" name="job_id" id="job_id_input">
         <input type="text" placeholder="Full Name" name="full_name" required>
         <input type="email" placeholder="Email" name="email" required>
         <textarea placeholder="Additional Information" name="additional_info"></textarea>
@@ -56,7 +54,7 @@
           <input type="file" name="cv">
         </div>
         <button type="submit" class="submit-btn">SUBMIT</button>
-      </form>
+      </form>      
     </div>
   </div>
 
