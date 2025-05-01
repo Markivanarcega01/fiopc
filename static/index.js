@@ -26,3 +26,8 @@ function openModal() {
 function closeModal() {
   document.getElementById("modalOverlay").style.display = "none";
 }
+
+// careers success message close button
+function closeSuccessModal() {
+  document.getElementById('successModal').style.display = 'none';
+}
