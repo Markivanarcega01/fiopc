@@ -20,6 +20,7 @@ def index(request):
             job=job
         )
 
-        return render(request, 'careers/careers.html', {'success': True, 'jobs': jobs})
+        return render(request, 'careers/careers.html', {'success': True})
 
     return render(request, 'careers/careers.html', {'jobs': jobs})
+

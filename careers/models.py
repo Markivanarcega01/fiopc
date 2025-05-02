@@ -11,7 +11,7 @@ class JobOpportunity(models.Model):
         return f"{self.company_name} - {self.title}"
 
 class Application(models.Model):
-    job = models.ForeignKey(JobOpportunity, on_delete=models.CASCADE, null=True)
+    job = models.ForeignKey(JobOpportunity, on_delete=models.CASCADE, default=None)
     full_name = models.CharField(max_length=255)
     email = models.EmailField()
     additional_info = models.TextField(blank=True)
