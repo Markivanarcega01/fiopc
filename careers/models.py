@@ -15,7 +15,7 @@ class Application(models.Model):
     full_name = models.CharField(max_length=255)
     email = models.EmailField()
     additional_info = models.TextField(blank=True)
-    cv = models.FileField(upload_to='cv_uploads/')
+    cv = models.FileField(upload_to='files')
 
     def __str__(self):
         return f"{self.full_name} - {self.job}"

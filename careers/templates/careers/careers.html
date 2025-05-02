@@ -39,7 +39,7 @@
     <div class="modal">
       <span class="close-btn" onclick="closeModal()">&times;</span>
       <h2>APPLICATION FORM</h2>
-      <form action="{% url 'careers:index' %}" method="POST" enctype="multipart/form-data">
+      <form action="{% url 'careers:create_application' %}" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <input type="hidden" name="job_id" id="job_id_input" value={{job.id}}>
         <input type="text" placeholder="Full Name" name="full_name" required>
@@ -60,7 +60,7 @@
  
 
   {% comment %} successful application modal {% endcomment %}
-  {% if success %}
+  {% if messages %}
   <div class="success-modal-overlay" id="successModal" style="display: block;">
     <div class="success-modal">
       <span class="close-btn" onclick="closeSuccessModal()">&times;</span>
