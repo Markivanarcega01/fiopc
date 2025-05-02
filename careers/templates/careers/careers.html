@@ -10,31 +10,28 @@
       <h2>{{ job.company_name }}</h2>
       <span class="arrow"><img src="/static/images/down-arrow.png/"></span>
     </div>
-    
     <div class="company-description">
       <p>{{ job.description }}</p>
     </div>
-
     <div class="collapsible-content">
       <p><strong>Job Title:</strong> {{ job.title }}</p>
-      
       <p><strong>Job Qualifications:</strong></p>
       <ul>
         {% for q in job.qualifications.splitlines %}
           <li>{{ q }}</li>
         {% endfor %}
       </ul>
-  
       <p><strong>Job Requirements:</strong></p>
       <ul>
         {% for r in job.requirements.splitlines %}
           <li>{{ r }}</li>
         {% endfor %}
       </ul>
-
       <a href="#" class="apply-button" onclick="openModal({{ job.id }})">APPLY NOW</a>
     </div>
   </div>
+
+  {% comment %} Application Form {% endcomment %}
   <div class="modal-overlay" id="modalOverlay">
     <div class="modal">
       <span class="close-btn" onclick="closeModal()">&times;</span>
@@ -53,11 +50,7 @@
       </form>      
     </div>
   </div>
-{% endfor %}
-
-  
-  {% comment %} Application Form {% endcomment %}
- 
+  {% endfor %}
 
   {% comment %} successful application modal {% endcomment %}
   {% if messages %}
@@ -69,7 +62,6 @@
     </div>
   </div>
   {% endif %}
-
 </div>
 
 {% endblock %}
