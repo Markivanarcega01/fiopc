@@ -7,14 +7,15 @@
   {% for job in jobs %}
   <div class="collapsible-container">
     <div class="collapsible-header" onclick="toggleCollapse(this)">
-      <h2>{{ job.company_name }}</h2>
+      {% comment %} <h2>{{ job.company_name }}</h2> {% endcomment %}
+      <h2>{{ job.title }}</h2>
       <span class="arrow"><img src="/static/images/down-arrow.png/"></span>
     </div>
     <div class="company-description">
       <p>{{ job.description }}</p>
     </div>
     <div class="collapsible-content">
-      <p><strong>Job Title:</strong> {{ job.title }}</p>
+      {% comment %} <p><strong>Job Title:</strong> {{ job.title }}</p> {% endcomment %}
       <p><strong>Job Qualifications:</strong></p>
       <ul>
         {% for q in job.qualifications.splitlines %}

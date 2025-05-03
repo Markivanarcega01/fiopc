@@ -291,7 +291,7 @@ footer .copyright {
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   overflow: hidden;
-  width: 75%;
+  width: 60%;
   margin: 0 auto 24px auto;
   transition: all 0.3s ease;
 }
