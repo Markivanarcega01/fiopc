@@ -53,7 +53,7 @@
     {% block maincontent%}
     {% endblock %}
 
-    <footer>
+    {% comment %} <footer>
         <div class="company-name">
           <img src="/static/images/footer-title.png" alt="Flow Industries OPC">
         </div>
@@ -73,7 +73,7 @@
         <div class="copyright">
             <p>Copyright 2025 &copy; FLOW INDUSTRIES OPC. All rights reserved.</p>
         </div>
-    </footer>
+    </footer> {% endcomment %}
 
     <script src="{% static 'index.js' %}"></script>
     <link rel = "stylesheet" href = "{% static 'style.css' %}">

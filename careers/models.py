@@ -4,8 +4,8 @@ class JobOpportunity(models.Model):
     title = models.CharField(max_length=255)
     company_name = models.CharField(max_length=255)
     description = models.TextField()
-    qualifications = models.TextField()
-    requirements = models.TextField()
+    qualifications = models.TextField(blank=True)
+    requirements = models.TextField(blank=True)
 
     def __str__(self):
         return f"{self.company_name} - {self.title}"

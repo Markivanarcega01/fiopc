@@ -4,6 +4,12 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: #f4f4f4;
   color: #333;
+  margin-top: 150px;
+}
+@media (max-width: 480px) {
+  body {
+    margin-top: 90px;
+  }
 }
 
 /* - - - - - NAVBAR - - - - - */
@@ -17,9 +23,15 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 10px 20px;
   display: flex;
+  top: 0;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  z-index: 1000;
   text-shadow: 1px 1px 2px white;
 }
 nav .logo-container {
@@ -98,27 +110,28 @@ nav .change .bar:nth-child(2) {
 nav .change .bar:nth-child(3) {
   transform: translateY(-9px) rotate(-45deg);
 }
-.nav-links-mobile {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: opacity 0.4s ease, max-height 0.75s ease, transform 0.4s ease;
-  flex-direction: column;
-  background: linear-gradient(90deg, #5BE0E9, #53CBD3);
-  width: 100%;
+nav .nav-links-mobile {
   position: absolute;
   top: 73px;
   left: 0;
-  padding: 0 8px;
   z-index: 10;
-  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   text-align: center;
-  pointer-events: none;
   box-sizing: border-box;
+  padding: 0 8px;
+  border-radius: 0;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  pointer-events: none;
   transform: translateY(-10px);
   will-change: opacity, max-height, transform;
+  transition: opacity 0.4s ease, max-height 0.75s ease, transform 0.4s ease;
+  background: linear-gradient(90deg, #5BE0E9, #53CBD3);
 }
-.nav-links-mobile.show {
+nav .nav-links-mobile.show {
   opacity: 1;
   max-height: 800px;
   pointer-events: auto;
@@ -165,6 +178,15 @@ nav .nav-links-mobile li a:hover {
   }
 }
 @media (max-width: 480px) {
+  nav {
+    width: 100% !important;
+  }
+  nav .logo-container {
+    padding: 0 8px;
+  }
+  nav .burger-menu {
+    padding: 0 20px;
+  }
   nav .logo-container a img {
     height: 48px;
   }
@@ -278,20 +300,33 @@ footer .copyright {
   max-height: auto;
 }
 .careers h1 {
-  font-size: 48px;
-  font-weight: 900;
+  font-size: 40px;
+  font-weight: 700;
   text-align: center;
-  margin: 32px 0;
+  margin: 32px auto;
   color: #03045e;
-  text-shadow: 2px 2px 2px #9a9a9a;
-  text-transform: uppercase;
+}
+.careers .careers-description {
+  margin: 0 auto 32px auto;
+  width: 60%;
+  text-align: center;
+  line-height: 2;
+  font-size: 20px;
+}
+.careers .open-positions {
+  display: flex;
+  align-items: center;
+  margin: 48px auto 16px auto;
+  width: 65%;
+  color: #03045e;
+  font-size: 32px;
 }
 .careers .collapsible-container {
   background: #caf0f8;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   overflow: hidden;
-  width: 60%;
+  width: 65%;
   margin: 0 auto 24px auto;
   transition: all 0.3s ease;
 }
@@ -420,6 +455,21 @@ footer .copyright {
   color: #000;
 }
 @media (max-width: 480px) {
+  .careers h1 {
+    font-size: 32px;
+  }
+  .careers .careers-description {
+    font-size: 16px;
+  }
+  .careers .open-positions {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .careers .collapsible-container {
+    width: 85%;
+  }
   .careers .modal {
     width: 90%;
     margin: 0 16px;
@@ -488,6 +538,9 @@ footer .copyright {
   gap: 64px;
   padding: 20px;
   justify-content: center;
+  width: 80%;
+  margin: 0 auto 32px auto;
+  /* background: #000; */
 }
 .products .product1-container img {
   height: 400px;
@@ -512,4 +565,51 @@ footer .copyright {
   margin: 16px 24px;
   border-radius: 8px;
   background-color: #5CE1E6;
+}
+@media (max-width: 1184px) {
+  .products .feature-container {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1124px) {
+  .products .product-title {
+    font-size: 24px;
+  }
+}
+@media (max-width: 1114px) {
+  .products .product1-container img {
+    height: 400px;
+    width: 375px;
+  }
+}
+@media (max-width: 880px) {
+  .products .product1-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+}
+@media (max-width: 760px) {
+  .products .title-container {
+    height: 150px;
+  }
+}
+@media (max-width: 570px) {
+  .products .title-container {
+    height: 225px;
+  }
+}
+@media (max-width: 480px) {
+  .products .title-container {
+    height: 250px;
+  }
+  .products .product-title {
+    font-size: 24px;
+    height: 200px;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 32px;
+  }
 }

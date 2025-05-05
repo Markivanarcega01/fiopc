@@ -2,34 +2,47 @@
 {% block maincontent %}
 
 <div class="careers">
-  <h1>Careers</h1>
+  <h1>Join Our Mission to Transform Water<br>for a Better Tomorrow</h1>
+  <p class="careers-description">
+    At Flow Industries OPC, we are driven by a noble mission — to serve others through meaningful work that creates cleaner, healthier communities. Guided by our vision to become the leading organization in the Philippines, we uphold strong values: being capable, trustworthy, incorruptible, and God-fearing.<br><br>
+    Whether you're a fresh graduate or a seasoned expert, you'll be a part of a purpose-driven team that values integrity, growth, and collaboration. We believe that attitude comes first, talent follows, and profit is the result — because who we are matters most.<br><br>
+    Start your journey with us — where every drop matters, and so does every team member.
+  </p>
 
+  {% comment %} <iframe src="https://www.google.com/maps/embed?pb=!3m2!1sen!2sph!4v1746422683541!5m2!1sen!2sph!6m8!1m7!1s0gQ6smIYleDOWpKLxO7coA!2m2!1d14.42563532850674!2d121.0224679078326!3f87.64050595687277!4f29.821747070943005!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> {% endcomment %}
+
+  <h2 class="open-positions">Open Positions</h2>
   {% for job in jobs %}
   <div class="collapsible-container">
     <div class="collapsible-header" onclick="toggleCollapse(this)">
-      {% comment %} <h2>{{ job.company_name }}</h2> {% endcomment %}
       <h2>{{ job.title }}</h2>
       <span class="arrow"><img src="/static/images/down-arrow.png/"></span>
     </div>
+
     <div class="company-description">
       <p>{{ job.description }}</p>
     </div>
+
     <div class="collapsible-content">
-      {% comment %} <p><strong>Job Title:</strong> {{ job.title }}</p> {% endcomment %}
+      {% if job.qualifications %}
       <p><strong>Job Qualifications:</strong></p>
+      {% endif %}
       <ul>
         {% for q in job.qualifications.splitlines %}
           <li>{{ q }}</li>
         {% endfor %}
       </ul>
+      {% if job.requirements %}
       <p><strong>Job Requirements:</strong></p>
       <ul>
-        {% for r in job.requirements.splitlines %}
-          <li>{{ r }}</li>
-        {% endfor %}
+      {% endif %}
+      {% for r in job.requirements.splitlines %}
+        <li>{{ r }}</li>
+      {% endfor %}
       </ul>
       <a href="#" class="apply-button" onclick="openModal({{ job.id }})">APPLY NOW</a>
     </div>
+
   </div>
 
   {% comment %} Application Form {% endcomment %}
