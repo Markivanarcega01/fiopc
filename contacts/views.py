@@ -4,6 +4,8 @@ from django.contrib import messages
 from django.http import JsonResponse
 from django.urls import reverse
 
+def index(request):
+    return render(request, "contacts/contacts.html")
 def create_message(request):
     try:
         if request.method == "POST":
