@@ -46,10 +46,10 @@
   </div>
 
     {% comment %} successful application modal {% endcomment %}
-    {% if msg %}
-    <div class="success-modal-overlay" id="successModal" style="display: block;">
+    {% if isSuccess %}
+    <div class="success-modal-overlay" id="contactsSuccessModal" style="display: block;">
       <div class="success-modal">
-        <span class="close-btn" onclick="closeSuccessModal()">&times;</span>
+        <span class="close-btn" onclick="closeContactsSuccessModal()">&times;</span>
         <h2>Message Submitted!</h2>
         <p>We'll get back to you as soon as possible.</p>
       </div>
