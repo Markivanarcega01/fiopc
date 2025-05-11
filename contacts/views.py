@@ -4,7 +4,7 @@ from django.contrib import messages as msg
 from django.http import JsonResponse
 from django.urls import reverse
 
-def contact_view(request):
+def create_message(request):
     try:
         if request.method == "POST":
             full_name = request.POST.get("full_name")

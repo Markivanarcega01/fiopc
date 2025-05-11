@@ -668,6 +668,7 @@ footer .copyright {
 .contacts .modal {
   margin: 32px auto;
 }
+
 @media screen and (max-width: 768px) {
   .contacts .map-and-info {
     flex-direction: column;
