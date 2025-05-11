@@ -18,29 +18,30 @@ function toggleCollapse(element) {
 }
 
 // careers page modal
-function openModal() {
-  document.getElementById("modalOverlay").style.display = "flex";
-}
+// function openModal() {
+//   document.getElementById("modalOverlay").style.display = "flex";
+// }
 
-// careers page modal close button
-function closeModal() {
-  document.getElementById("modalOverlay").style.display = "none";
-}
+// // careers page modal close button
+// function closeModal() {
+//   document.getElementById("modalOverlay").style.display = "none";
+// }
 
 // careers success message close button
-function closeSuccessModal() {
-  document.getElementById('successModal').style.display = 'none';
+function closeCareersSuccessModal() {
+  document.getElementById('careersSuccessModal').style.display = 'none';
 }
 
 // careers page modal form submission
-function openModal(jobId) {
-  document.getElementById("modalOverlay").style.display = "flex";
+function openCareersModal(jobId) {
+  document.getElementById("careersModalOverlay").style.display = "flex";
   document.getElementById("job_id_input").value = jobId;
 }
-function closeModal() {
-  document.getElementById("modalOverlay").style.display = "none";
+function closeCareersModal() {
+  document.getElementById("careersModalOverlay").style.display = "none";
 }
 
-function closeSuccessModal() {
-  document.getElementById("successModal").style.display = "none";
+// Contacts page
+function closeContactsSuccessModal() {
+  document.getElementById("contactsSuccessModal").style.display = "none";
 }

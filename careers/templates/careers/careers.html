@@ -38,15 +38,15 @@
         <li>{{ r }}</li>
       {% endfor %}
       </ul>
-      <a href="#" class="apply-button" onclick="openModal({{ job.id }})">APPLY NOW</a>
+      <a href="#" class="apply-button" onclick="openCareersModal({{ job.id }})">APPLY NOW</a>
     </div>
 
   </div>
 
   {% comment %} Application Form {% endcomment %}
-  <div class="modal-overlay" id="modalOverlay">
+  <div class="modal-overlay" id="careersModalOverlay">
     <div class="modal">
-      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <span class="close-btn" onclick="closeCareersModal()">&times;</span>
       <h2>APPLICATION FORM</h2>
       <form action="{% url 'careers:create_application' %}" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
@@ -65,10 +65,10 @@
   {% endfor %}
 
   {% comment %} successful application modal {% endcomment %}
-  {% if messages %}
-  <div class="success-modal-overlay" id="successModal" style="display: block;">
+  {% if isSuccess %}
+  <div class="success-modal-overlay" id="careersSuccessModal" style="display: block;">
     <div class="success-modal">
-      <span class="close-btn" onclick="closeSuccessModal()">&times;</span>
+      <span class="close-btn" onclick="closeCareersSuccessModal()">&times;</span>
       <h2>Application Submitted!</h2>
       <p>Thank you for applying. We’ll get back to you soon.</p>
     </div>

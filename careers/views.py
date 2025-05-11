@@ -30,8 +30,10 @@ def create_application(request):
                 job=job
             )
             messages.success(request, 'Application submitted successfully')
-            # return render(request, 'careers/careers.html', {'success': True, })
-        return redirect(reverse('careers:index'), success=True)
+            return redirect(reverse('careers:index'), {'isSuccess': True})
+            #return render(request, 'careers/careers.html', {'success': True, })
+        else:
+            return redirect(reverse('careers:index'), {'isSuccess': False})
     except:
         return JsonResponse({'error': 'Something went wrong'})
     
