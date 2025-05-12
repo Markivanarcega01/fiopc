@@ -705,3 +705,63 @@ footer .copyright {
     gap: 12px;
   }
 }
+
+/* - - - - - SERVICES - - - - - */
+.services .title {
+  color: #0077b6;
+  font-size: 72px;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+.services .description {
+  line-height: 2;
+  font-size: 18px;
+  margin: -40px auto 0 auto;
+  text-align: justify;
+  width: 70%;
+}
+.services .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 32px auto;
+}
+.services .key-advantages {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 16px auto;
+  width: 80%;
+}
+.services .text-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin: 0 auto;
+  width: 80%;
+}
+.services .column {
+  flex: 1;
+  min-width: 300px;
+}
+.services .service {
+  margin-bottom: 32px;
+}
+.services .service-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.services .service-description {
+  line-height: 1.5;
+  font-size: 16px;
+}
+@media (max-width: 580px) {
+  .services .title {
+    font-size: 48px;
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+  .services img {
+    width: 95%;
+  }
+}
