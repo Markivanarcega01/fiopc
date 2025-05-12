@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect
 from .models import ContactMessage
-from django.contrib import messages as msg
+from django.contrib import messages
 from django.http import JsonResponse
 from django.urls import reverse
 
+def index(request):
+    return render(request, "contacts/contacts.html")
 def create_message(request):
     try:
         if request.method == "POST":
@@ -22,10 +24,11 @@ def create_message(request):
                 message=message,
                 contact_num=contact_num,
             )
-            msg.success(request, 'Message submitted successfully')
-            return redirect(reverse('contacts:index'), success=True)
-
-        return render(request, "contacts/contacts.html")
+            messages.success(request, 'Message submitted successfully')
+            return render(request, "contacts/contacts.html", {"isSuccess": True})
+            #return redirect(reverse('contacts:index'), success=True)
+        else:
+            return render(request, "contacts/contacts.html", {"isSuccess": False})
     except Exception as e:
         print("Error:", e)
         return JsonResponse({'error': 'Something went wrong'})
