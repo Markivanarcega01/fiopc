@@ -25,4 +25,5 @@ urlpatterns = [
     path('careers/', include('careers.urls')),
     path('contacts/', include('contacts.urls')),
     path('services/', include('services.urls')),
+    path('licenses-certificates/', include('licenses_certificates.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

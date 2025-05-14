@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'careers',
     'contacts',
     'services',
+    'licenses_certificates',
 ]
 
 MIDDLEWARE = [
