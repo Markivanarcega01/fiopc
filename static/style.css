@@ -707,7 +707,8 @@ footer .copyright {
 }
 
 /* - - - - - SERVICES - - - - - */
-.services .title {
+.services .title,
+.certs .title {
   color: #0077b6;
   font-size: 72px;
   font-weight: 700;
@@ -756,7 +757,8 @@ footer .copyright {
   font-size: 16px;
 }
 @media (max-width: 580px) {
-  .services .title {
+  .services .title,
+  .certs .title {
     font-size: 48px;
     line-height: 1;
     margin-bottom: 16px;
@@ -764,4 +766,27 @@ footer .copyright {
   .services img {
     width: 95%;
   }
+}
+
+/* - - - - - Licenses and Certificates - - - - -*/
+.certs .grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  width: 80%;
+  margin: 0 auto 32px auto;
+}
+.certs .grid-item {
+  text-align: center;
+}
+.certs .grid-item img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+.certs .name {
+  font-weight: bold;
+  font-size: 16px;
 }
