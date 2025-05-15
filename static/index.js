@@ -45,3 +45,28 @@ function closeCareersModal() {
 function closeContactsSuccessModal() {
   document.getElementById("contactsSuccessModal").style.display = "none";
 }
+
+// Home page carousel
+const slides = document.querySelectorAll('.carousel-item');
+const dots = document.querySelectorAll('.dot');
+let currentIndex = 0;
+function updateCarousel(index) {
+  const carouselInner = document.querySelector('.carousel-inner');
+  carouselInner.style.transform = `translateX(-${index * 100}%)`;
+  dots.forEach(dot => dot.classList.remove('active'));
+  dots[index].classList.add('active');
+}
+document.querySelector('.next').addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  updateCarousel(currentIndex);
+});
+document.querySelector('.prev').addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  updateCarousel(currentIndex);
+});
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    currentIndex = index;
+    updateCarousel(index);
+  });
+});
