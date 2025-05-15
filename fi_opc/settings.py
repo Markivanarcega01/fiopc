@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'contacts',
     'services',
     'licenses_certificates',
+    'about',
+    'partners',
+    'home',
 ]
 
 MIDDLEWARE = [
