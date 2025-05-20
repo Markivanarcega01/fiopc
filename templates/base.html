@@ -1,87 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <title>FIOPC</title>
-    {% load static %}
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>FIOPC</title>
+  {% load static %}
 </head>
 
 <body>
-    <div class="navbar-body">
-        <nav>
-            <!-- Logo and Company Name -->
-            <div class="logo-container">
-              <a href="home:index" class="logo-container">
-                <img src="/static/images/fiopc-title.png" alt="Flow Industries OPC">
-              </a>
-            </div>
-        
-            <!-- Navigation Links for Desktop -->
-            <ul class="nav-links-desktop">
-                <li><a href="{% url 'home:index' %}">Home</a></li>
-                <li class="dropdown">
-                  <a href="#">Services</a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Web Development</a></li>
-                    <li><a href="#">Mobile App Development</a></li>
-                    <li><a href="#">Consulting</a></li>
-                  </ul>
-                </li>
-                <li><a href="{% url 'products:index' %}">Products</a></li>
-                <li><a href="{% url 'partners:index' %}">Partners</a></li>
-                <li><a href="{% url 'careers:index' %}">Careers</a></li>
-                <li><a href="{% url 'licenses_certificates:index' %}">Licenses and Certs</a></li>
-                <li><a href="{% url 'about:index' %}">About</a></li>
-                <li><a href="{% url 'contacts:index' %}">Contact</a></li>
-            </ul>
-        
-            <!-- Burger Menu -->
-            <div class="burger-menu" onclick="toggleMenu(this)">
-              <div class="bar"></div>
-              <div class="bar"></div>
-              <div class="bar"></div>
-            </div>
-            
-            <!-- Navigation Links for Mobile -->
-            <ul class="nav-links-mobile">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Partners</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Licenses and Certs</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-          </nav>
+  <div class="navbar-body">
+    <nav>
+      {% comment %} Logo {% endcomment %}
+      <div class="logo-container">
+        <a href="home:index" class="logo-container">
+          <img src="/static/images/fiopc-title.png" alt="Flow Industries OPC">
+        </a>
+      </div>
+
+      {% comment %} Links {% endcomment %}
+      <ul class="nav-links">
+        <li><a href="{% url 'home:index' %}">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="{% url 'services:consulting-services' %}">Consulting Services</a></li>
+            <li><a href="{% url 'services:design-and-build' %}">Design and Build</a></li>
+            <li><a href="{% url 'services:engineering-services' %}">Engineering Services</a></li>
+            <li><a href="{% url 'services:operations-and-maintenance' %}">Operations and Maintenance</a></li>
+            <li><a href="{% url 'services:rehabilitation' %}">Rehabilitation</a></li>
+            <li><a href="{% url 'services:technology-upgrade' %}">Technology Upgrade</a></li>
+          </ul>
+        </li>
+        <li><a href="{% url 'products:index' %}">Products</a></li>
+        <li><a href="{% url 'partners:index' %}">Partners</a></li>
+        <li><a href="{% url 'careers:index' %}">Careers</a></li>
+        <li><a href="{% url 'licenses_certificates:index' %}">Licenses and Certs</a></li>
+        <li><a href="{% url 'about:index' %}">About</a></li>
+        <li><a href="{% url 'contacts:index' %}">Contact</a></li>
+      </ul>
+
+    </nav>
+
+  </div>
+
+  {% block maincontent%}
+  {% endblock %}
+
+  {% comment %} <footer>
+  <div class="company-name">
+    <img src="/static/images/footer-title.png" alt="Flow Industries OPC">
+  </div>
+  <div class="info">
+    <div class="col1">
+      <i class='bx bxs-phone'></i>(02) 8296 2844<br>
+      <i class='bx bxs-mobile'></i>+639-776-597-815
     </div>
+    <div class="col2">
+      <i class='bx bxs-map'></i>Unit F 6/F Westgate Tower Condo, Investment Dr., Madrigal Business Park, Ayala-Alabang, Muntinlupa 1780
+    </div>
+    <div class="col3">
+      <i class='bx bxl-linkedin-square' ></i>Flow Industries OPC<br>
+      <i class='bx bxl-facebook-square' ></i>FlowIndustriesOPC
+    </div>
+  </div>
+  <div class="copyright">
+    <p>Copyright 2025 &copy; FLOW INDUSTRIES OPC. All rights reserved.</p>
+  </div>
+  </footer> {% endcomment %}
 
-    {% block maincontent%}
-    {% endblock %}
-
-    {% comment %} <footer>
-        <div class="company-name">
-          <img src="/static/images/footer-title.png" alt="Flow Industries OPC">
-        </div>
-        <div class="info">
-          <div class="col1">
-            <i class='bx bxs-phone'></i>(02) 8296 2844<br>
-            <i class='bx bxs-mobile'></i>+639-776-597-815
-          </div>
-          <div class="col2">
-            <i class='bx bxs-map'></i>Unit F 6/F Westgate Tower Condo, Investment Dr., Madrigal Business Park, Ayala-Alabang, Muntinlupa 1780
-          </div>
-          <div class="col3">
-            <i class='bx bxl-linkedin-square' ></i>Flow Industries OPC<br>
-            <i class='bx bxl-facebook-square' ></i>FlowIndustriesOPC
-          </div>
-        </div>
-        <div class="copyright">
-            <p>Copyright 2025 &copy; FLOW INDUSTRIES OPC. All rights reserved.</p>
-        </div>
-    </footer> {% endcomment %}
-
-    <script src="{% static 'index.js' %}"></script>
-    <link rel = "stylesheet" href = "{% static 'style.css' %}">
+  <script src="{% static 'index.js' %}"></script>
+  <link rel = "stylesheet" href = "{% static 'style.css' %}">
 </body>
 </html>
