@@ -11,7 +11,7 @@
         <nav>
             <!-- Logo and Company Name -->
             <div class="logo-container">
-              <a href="#" class="logo-container">
+              <a href="home:index" class="logo-container">
                 <img src="/static/images/fiopc-title.png" alt="Flow Industries OPC">
               </a>
             </div>
@@ -19,7 +19,14 @@
             <!-- Navigation Links for Desktop -->
             <ul class="nav-links-desktop">
                 <li><a href="{% url 'home:index' %}">Home</a></li>
-                <li><a href="{% url 'services:index' %}">Services</a></li>
+                <li class="dropdown">
+                  <a href="#">Services</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">Mobile App Development</a></li>
+                    <li><a href="#">Consulting</a></li>
+                  </ul>
+                </li>
                 <li><a href="{% url 'products:index' %}">Products</a></li>
                 <li><a href="{% url 'partners:index' %}">Partners</a></li>
                 <li><a href="{% url 'careers:index' %}">Careers</a></li>
