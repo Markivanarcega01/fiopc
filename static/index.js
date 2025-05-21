@@ -73,9 +73,9 @@ dots.forEach((dot, index) => {
 
 // Home page collapsible text
 const text = document.getElementById("text");
-    const toggleBtn = document.getElementById("toggleBtn");
-    toggleBtn.addEventListener("click", () => {
-      text.classList.toggle("expanded");
-      toggleBtn.textContent = text.classList.contains("expanded") ? "See Less" : "See More";
-    });
+const toggleBtn = document.getElementById("toggleBtn");
+toggleBtn.addEventListener("click", () => {
+  text.classList.toggle("expanded");
+  toggleBtn.textContent = text.classList.contains("expanded") ? "See Less" : "See More";
+});
     

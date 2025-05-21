@@ -11,7 +11,7 @@
     <nav>
       {% comment %} Logo {% endcomment %}
       <div class="logo-container">
-        <a href="home:index" class="logo-container">
+        <a href="{% url 'home:index' %}" class="logo-container">
           <img src="/static/images/fiopc-title.png" alt="Flow Industries OPC">
         </a>
       </div>
@@ -20,7 +20,7 @@
       <ul class="nav-links">
         <li><a href="{% url 'home:index' %}">Home</a></li>
         <li class="dropdown">
-          <a href="#">Services</a>
+          <a class="disabled" href="#">Services</a>
           <ul class="dropdown-menu">
             <li><a href="{% url 'services:consulting-services' %}">Consulting Services</a></li>
             <li><a href="{% url 'services:design-and-build' %}">Design and Build</a></li>
@@ -38,8 +38,13 @@
         <li><a href="{% url 'contacts:index' %}">Contact</a></li>
       </ul>
 
+      <!-- Hamburger -->
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
-
   </div>
 
   {% block maincontent%}
@@ -69,5 +74,18 @@
 
   <script src="{% static 'index.js' %}"></script>
   <link rel = "stylesheet" href = "{% static 'style.css' %}">
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const nav = document.querySelector('.navbar-body nav');
+      const hamburger = document.querySelector('.hamburger');
+      if (hamburger && nav) {
+        hamburger.addEventListener('click', () => {
+          nav.classList.toggle('active');
+        });
+      }
+    });
+  </script>
+
 </body>
 </html>
