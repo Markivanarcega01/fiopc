@@ -667,7 +667,9 @@ footer .copyright {
 .services .title,
 .certs .title,
 .home .title,
-.about .title {
+.about .title,
+.partners .title,
+.major-clients .title {
   color: #0077b6;
   font-size: 72px;
   font-weight: 700;
@@ -719,7 +721,9 @@ footer .copyright {
   .services .title,
   .certs .title,
   .home .title,
-  .about .title {
+  .about .title,
+  .partners .title,
+  .major-clients .title {
     font-size: 48px;
     line-height: 1;
     margin-bottom: 16px;
@@ -750,6 +754,35 @@ footer .copyright {
 .certs .name {
   font-weight: bold;
   font-size: 16px;
+}
+.certs .modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+.certs .modal-content {
+  margin: 16px auto 0 auto;
+  display: block;
+  width: 500px;
+  height: 675px;
+}
+.certs .close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.certs .close:hover {
+  color: #ccc;
 }
 
 /* - - - - - HOMEPAGE - - - - - */
@@ -1026,5 +1059,20 @@ footer .copyright {
   .about .about-us {
     font-size: 16px;
     margin-top: 0;
+  }
+}
+
+/* - - - - - PARTNERS, MAJOR CLIENTS - - - - - */
+.partners img,
+.major-clients img {
+  height: auto;
+  width: 550px;
+  display: block;
+  margin: 0 auto;
+}
+@media (max-width: 600px) {
+  .partners img,
+  .major-clients img {
+    width: 90%;
   }
 }

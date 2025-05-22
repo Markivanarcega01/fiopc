@@ -78,4 +78,23 @@ toggleBtn.addEventListener("click", () => {
   text.classList.toggle("expanded");
   toggleBtn.textContent = text.classList.contains("expanded") ? "See Less" : "See More";
 });
-    
+
+// Certificates page modal
+// const modal = document.getElementById("imageModal");
+// const modalImg = document.getElementById("modalImage");
+// const closeBtn = document.querySelector(".close");
+// document.querySelectorAll(".grid-item img").forEach(img => {
+//   img.addEventListener("click", () => {
+//     modal.style.display = "block";
+//     modalImg.src = img.src;
+//     modalImg.alt = img.alt;
+//   });
+// });
+// closeBtn.addEventListener("click", () => {
+//   modal.style.display = "none";
+// });
+// window.addEventListener("click", (e) => {
+//   if (e.target === modal) {
+//     modal.style.display = "none";
+//   }
+// });
