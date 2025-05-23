@@ -626,6 +626,10 @@ footer .copyright {
 .contacts .modal {
   margin: 32px auto;
 }
+.contacts .icon {
+  height: 24px;
+  width: 24px;
+}
 
 @media screen and (max-width: 768px) {
   .contacts .map-and-info {
