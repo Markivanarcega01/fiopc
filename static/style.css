@@ -117,21 +117,20 @@ nav .hamburger span {
     width: 100%;
     display: none;
     padding: 1rem;
-    margin-top: 1rem;
+    margin-top: 0;
     border-radius: 12px;
     gap: 8px;
     text-align: center;
   }
   nav .nav-links li {
     margin: 0;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.20);
     background: #f6f6f6;
-    padding: 0.75rem 0.5rem;
-    border-radius: 3px;
+    padding: 0.5rem;
+    border-radius: 5px;
     transition: all 0.3s ease-in-out;
   }
   nav .nav-links li:hover {
-    transform: scale(1.025);
+    transform: scale(1.02);
   }
   nav.active .nav-links {
     display: flex;
@@ -139,13 +138,25 @@ nav .hamburger span {
   nav .hamburger {
     display: flex;
   }
+  nav .dropdown:hover {
+    transform: none !important;
+  }
   nav .dropdown-menu {
     display: flex !important;
+    align-items: center;
     flex-direction: column;
     width: auto;
     position: static;
     box-shadow: none;
-    padding-left: 1rem;
+    background: #f6f6f6;
+  }
+  nav .dropdown-menu li {
+    background: none;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+  }
+  nav .dropdown-menu li:hover {
+    transform: scale(1.0) !important;
   }
 }
 
