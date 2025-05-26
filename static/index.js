@@ -22,7 +22,7 @@ function toggleCollapse(element) {
 //   document.getElementById("modalOverlay").style.display = "flex";
 // }
 
-// // careers page modal close button
+// careers page modal close button
 // function closeModal() {
 //   document.getElementById("modalOverlay").style.display = "none";
 // }
@@ -96,5 +96,5 @@ toggleBtn.addEventListener("click", () => {
 // window.addEventListener("click", (e) => {
 //   if (e.target === modal) {
 //     modal.style.display = "none";
-//   }
+//   }  
 // });
