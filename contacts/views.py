@@ -26,7 +26,7 @@ def create_message(request):
             )
             messages.success(request, 'Message submitted successfully')
             return render(request, "contacts/contacts.html", {"isSuccess": True})
-            #return redirect(reverse('contacts:index'), success=True)
+            #return redirect(reverse('contacts:index'), {"isSuccess": True})
         else:
             return render(request, "contacts/contacts.html", {"isSuccess": False})
     except Exception as e:

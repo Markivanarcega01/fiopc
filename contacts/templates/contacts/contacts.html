@@ -1,25 +1,25 @@
-02.{% extends 'base.html'%}
+{% extends 'base.html'%}
 {% block maincontent %}
-
+{% load static %}
 <div class="contacts">
   <div class="map-and-info">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7728.035528225201!2d121.01826247895885!3d14.426139524655554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d1cf7b8a3577%3A0x9b2a2beca0441db3!2s1761%20Investment%20Dr%2C%20Muntinlupa%2C%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1746449261722!5m2!1sen!2sph"style="border:transparent;"></iframe>
     <div class="contact-info">
       <h2>Contact Us</h2>
       <div class="location">
-        <img class="icon" src="../static/images/marker.png">
+        <img class="icon" src="{% static 'images/marker.png' %}">
         <p class="location-text">Unit F 6/F Westgate Tower Condo, Investment Dr., Madrigal Business Park, Ayala-Alabang, Muntinlupa 1780</p>
       </div>
       <div class="email">
-        <img class="icon" src="../static/images/envelope.png">
+        <img class="icon" src="{% static 'images/envelope.png' %}">
         <p class="email-text">flowindustriesopc@gmail.com</p>
       </div>
       <div class="phone">
-        <img class="icon" src="../static/images/phone-call.png">
+        <img class="icon" src="{% static 'images/phone-call.png' %}">
         <p class="phone-text">(02) 8296 2844</p>
       </div>
       <div class="mobile">
-        <img class="icon" src="../static/images/mobile-button.png">
+        <img class="icon" src="{% static 'images/mobile-button.png' %}">
         <p class="mobile-text">+639-776-597-815</p>
       </div>
       <div class="social-links">
