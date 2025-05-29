@@ -74,6 +74,8 @@
   </div>
   </footer> {% endcomment %}
 
+  <button id="backToTopBtn" title="Go to top">↑</button>
+
   <script src="{% static 'index.js' %}"></script>
   <link rel = "stylesheet" href = "{% static 'style.css' %}">
 
@@ -97,6 +99,23 @@
     } else {
       navbar.classList.remove("scrolled");
     }
+  });
+</script>
+
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+  window.onscroll = function () {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  };
+  backToTopBtn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   });
 </script>
 
