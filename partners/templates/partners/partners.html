@@ -1,16 +1,17 @@
 {% extends 'base.html' %}
 {% block maincontent %}
+{% load static %}
 
 <div class="partners">
 
   <div class="partners company">
     <div class="partners title"><p>Naturelink Industries Corporation</p></div>
-    <img src="../static/images/naturelink-industries-corporation.png" alt="Naturelink Industries Corporation">
+    <img src="{% static 'images/naturelink-industries-corporation.png' %}" alt="Naturelink Industries Corporation">
   </div>
 
   <div class="partners company">
     <div class="partners title"><p>EM Research Philippines Inc.</p></div>
-    <img src="../static/images/em-research-philippines-inc.png" alt="EM Research Philippines Inc.">
+    <img src="{% static 'images/em-research-philippines-inc.png' %}" alt="EM Research Philippines Inc.">
   </div>
   
 </div>

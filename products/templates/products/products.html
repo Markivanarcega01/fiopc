@@ -1,5 +1,6 @@
 {% extends 'base.html'%}
 {% block maincontent %}
+{% load static %}
 
 <div class="products">
 
@@ -16,7 +17,7 @@
   </div>
   
   <div class="product1-container">
-      <img src="../static/images/cifas-ombr.png" />
+      <img src="{% static 'images/cifas-ombr.png' %}" />
       <div class="feature-container">
         <h3>Key Features of CIFAS + OMBR</h3>
         <p class="feature">Compact Design</p>

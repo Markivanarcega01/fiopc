@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block maincontent %}
+{% load static %}
 
 {% comment %} FINISHED {% endcomment %}
 
@@ -13,7 +14,7 @@
   </div>
 
   <div class="image">
-    <img src="../../static/images/engineering-services.png" alt="Engineering Services">
+    <img src="{% static 'images/engineering-services.png' %}" alt="Engineering Services">
   </div>
 
   <div class="key-advantages">Key Advantages of Our Engineering Services</div>

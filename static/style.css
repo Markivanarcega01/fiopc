@@ -811,10 +811,10 @@ footer .copyright {
   background-color: rgba(0,0,0,0.8);
 }
 .certs .modal-content {
-  margin: 16px auto 0 auto;
+  margin: 100px auto 0 auto;
   display: block;
-  width: 500px;
-  height: 675px;
+  width: 450px;
+  height: 625px;
 }
 .certs .close {
   position: absolute;
