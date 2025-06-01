@@ -13,6 +13,8 @@ def index(request):
 
 def create_application(request):
     try:
+
+        jobs = JobOpportunity.objects.all()
         if request.method == 'POST':
             full_name = request.POST.get('full_name')
             email = request.POST.get('email')
@@ -30,8 +32,8 @@ def create_application(request):
                 job=job
             )
             messages.success(request, 'Application submitted successfully')
-            # return redirect(reverse('careers:index'), {'isSuccess': True})
-            return render(request, 'careers/careers.html', {'isSuccess': True, })
+            #return redirect(reverse('careers:index'), {'isSuccess': True})
+            return render(request, 'careers/careers.html', {'isSuccess': True, "jobs": jobs})
         else:
             return redirect(reverse('careers:index'), {'isSuccess': False})
     except:
