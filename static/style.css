@@ -78,9 +78,10 @@ nav .dropdown-menu {
   display: none;
   position: absolute;
   top: 100%;
-  left: 0;
+  left: -70px;
   list-style: none;
-  background: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.875);
   padding: 0.5rem 0;
   min-width: 220px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -1010,7 +1011,8 @@ footer .copyright {
   display: none;
 }
 .home .what-we-offer {
-  margin-top: -32px;
+  margin-top: 0;
+  margin-bottom: -80px;
 }
 .home .grid-container {
   display: grid;
@@ -1057,7 +1059,7 @@ footer .copyright {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
-  gap: 40px;
+  gap: 0 150px;
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
@@ -1072,11 +1074,12 @@ footer .copyright {
 .home .vision,
 .home .core-values,
 .home .core-ideology {
-  background-color: #f9f9f9;
-  margin-top: -32px;
+  /* background-color: #f9f9f9; */
+  margin-top: -64px;
   padding: 15px;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); */
 }
 .home .mission,
 .home .vision {
@@ -1090,6 +1093,8 @@ footer .copyright {
 .home .section {
   display: flex;
   flex-direction: column;
+  /* margin: 0 32px;
+  width: 500px; */
 }
 
 @media (max-width: 1000px) {
@@ -1143,7 +1148,7 @@ footer .copyright {
 .partners {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 24px 150px;
   flex-wrap: wrap;
   text-align: center;
   padding: 20px;
@@ -1151,16 +1156,23 @@ footer .copyright {
 .partners .company {
   width: 450px;
   flex-shrink: 0;
+  margin-top: -52px;
 }
 .partners .title p {
   font-weight: bold;
   margin-bottom: 5px;
-  font-size: 32px;
+  font-size: 40px;
+  color: #2c3e50;
+  width: 450px;
 }
 .partners img {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 425px;
+  max-height: 300px;
   border-radius: 8px;
+  /* background-color: red; */
+}
+.partners img.naturelink {
+  margin-top: -20px;
 }
 /* ✅ Responsive Design */
 @media (max-width: 768px) {
