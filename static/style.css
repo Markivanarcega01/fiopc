@@ -1108,6 +1108,17 @@ footer .copyright {
   .home .txt-container {
     grid-template-columns: 1fr;
   }
+  .home .introduction {
+    margin: 64px auto 80px auto;
+  }
+  .home .txt-title {
+    margin: -32px auto -16px auto;
+  }
+  .home .mission,
+  .home .vision,
+  .home .core-values {
+    margin-bottom: -16px;
+  }
 }
 
 /* - - - - - ABOUT - - - - - */
