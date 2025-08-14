@@ -1,6 +1,6 @@
 {% extends 'base.html'%}
 {% block maincontent %}
-
+{% load static %}
 <div class="careers">
   <h1>Join Our Mission to Transform Water<br>for a Better Tomorrow</h1>
   <p class="careers-description">
@@ -14,7 +14,7 @@
   <div class="collapsible-container">
     <div class="collapsible-header" onclick="toggleCollapse(this)">
       <h2>{{ job.title }}</h2>
-      <span class="arrow"><img src="/static/images/down-arrow.png/"></span>
+      <span class="arrow"><img src="{% static 'images/down-arrow.png' %}"></span>
     </div>
 
     <div class="company-description">
