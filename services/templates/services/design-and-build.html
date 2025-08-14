@@ -4,7 +4,8 @@
 
 {% comment %} FINISHED {% endcomment %}
 
-<div class="services">
+<div class="services"> 
+  <button id="backBtn" title="Go back">←</button>
   <div class="title">
     <p>DESIGN AND BUILD</p>
   </div>
@@ -64,5 +65,15 @@
     </div>
   </div>
 </div>
+
+<script>
+  document.getElementById('backBtn').addEventListener('click', function () {
+    if (history.length > 1) {
+      history.back();
+    } else {
+      window.location.href = "/";
+    }
+  });
+</script>
 
 {% endblock%}

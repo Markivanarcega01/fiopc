@@ -33,7 +33,7 @@
           </ul>
         </li>
         <li><a href="{% url 'products:index' %}">Products</a></li>
-        <li><a href="{% url 'partners:index' %}">Partners</a></li>
+        {% comment %} <li><a href="{% url 'partners:index' %}">Partners</a></li> {% endcomment %}
         {% comment %} <li><a href="{% url 'major_clients:index' %}">Major Clients</a></li> {% endcomment %}
         <li><a href="{% url 'careers:index' %}">Careers</a></li>
         <li><a href="{% url 'licenses_certificates:index' %}">Licenses and Certs</a></li>
@@ -53,27 +53,27 @@
   {% block maincontent%}
   {% endblock %}
 
-  {% comment %} <footer>
-  <div class="company-name">
-    <img src="/static/images/footer-title.png" alt="Flow Industries OPC">
-  </div>
-  <div class="info">
-    <div class="col1">
-      <i class='bx bxs-phone'></i>(02) 8296 2844<br>
-      <i class='bx bxs-mobile'></i>+639-776-597-815
+  <footer>
+    <div class="company-name">
+      <img src="/static/images/footer-title.png" alt="Flow Industries OPC">
     </div>
-    <div class="col2">
-      <i class='bx bxs-map'></i>Unit F 6/F Westgate Tower Condo, Investment Dr., Madrigal Business Park, Ayala-Alabang, Muntinlupa 1780
+    <div class="info">
+      <div class="col1">
+        <i class='bx bxs-phone'></i>(02) 8296 2844<br>
+        <i class='bx bxs-mobile'></i>+639-776-597-815
+      </div>
+      <div class="col2">
+        <i class='bx bxs-map'></i>Unit F 6/F Westgate Tower Condo, Investment Dr., Madrigal Business Park, Ayala-Alabang, Muntinlupa 1780
+      </div>
+      <div class="col3">
+        <i class='bx bxl-linkedin-square' ></i>Flow Industries OPC<br>
+        <i class='bx bxl-facebook-square' ></i>FlowIndustriesOPC
+      </div>
     </div>
-    <div class="col3">
-      <i class='bx bxl-linkedin-square' ></i>Flow Industries OPC<br>
-      <i class='bx bxl-facebook-square' ></i>FlowIndustriesOPC
+    <div class="copyright">
+      <p>Copyright 2025 &copy; FLOW INDUSTRIES OPC. All rights reserved.</p>
     </div>
-  </div>
-  <div class="copyright">
-    <p>Copyright 2025 &copy; FLOW INDUSTRIES OPC. All rights reserved.</p>
-  </div>
-  </footer> {% endcomment %}
+  </footer>
 
   <button id="backToTopBtn" title="Go to top">↑</button>
 
@@ -93,33 +93,32 @@
   </script>
 
   <script>
-  window.addEventListener("scroll", function () {
-    const navbar = document.querySelector(".navbar-body");
-    if (window.scrollY > 10) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
-    }
-  });
-</script>
-
-<script>
-  const backToTopBtn = document.getElementById("backToTopBtn");
-  window.onscroll = function () {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      backToTopBtn.style.display = "block";
-    } else {
-      backToTopBtn.style.display = "none";
-    }
-  };
-  backToTopBtn.addEventListener("click", function () {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
+    window.addEventListener("scroll", function () {
+      const navbar = document.querySelector(".navbar-body");
+      if (window.scrollY > 10) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
     });
-  });
-</script>
+  </script>
 
+  <script>
+    const backToTopBtn = document.getElementById("backToTopBtn");
+    window.onscroll = function () {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopBtn.style.display = "block";
+      } else {
+        backToTopBtn.style.display = "none";
+      }
+    };
+    backToTopBtn.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  </script>
 
 </body>
 </html>
