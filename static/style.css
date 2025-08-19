@@ -1075,16 +1075,8 @@ footer .copyright {
   font-weight: 500;
   color: #333;
 }
- .home .txt-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 0 150px;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-}
-.home .txt-title {
+.home .txt-title,
+.about .txt-title {
   font-size: 48px;
   font-weight: bold;
   margin: 0 auto;
@@ -1110,12 +1102,6 @@ footer .copyright {
   min-height: 160px;
   margin-bottom: 32px;
 }
-.home .section {
-  display: flex;
-  flex-direction: column;
-  /* margin: 0 32px;
-  width: 500px; */
-}
 
 @media (max-width: 1000px) {
   .home .grid-container {
@@ -1129,9 +1115,6 @@ footer .copyright {
   .home .card {
     width: 92%;
     margin: 0 auto;
-  }
-  .home .txt-container {
-    grid-template-columns: 1fr;
   }
   .home .introduction {
     margin: 64px auto 80px auto;
@@ -1160,10 +1143,34 @@ footer .copyright {
   line-height: 2.0;
   font-size: 18px;
 }
+.about .section {
+  display: flex;
+  flex-direction: column;
+  /* margin: 0 32px;
+  width: 500px; */
+}
+ .about .txt-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0 150px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.about .mission,
+.about .vision,
+.about .core-values,
+.about .core-ideology {
+  margin-top: -48px;
+}
 @media (max-width: 560px) {
   .about .about-us {
     font-size: 16px;
     margin-top: 0;
+  }
+    .home .txt-container {
+    grid-template-columns: 1fr;
   }
 }
 
