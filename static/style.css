@@ -1266,14 +1266,13 @@ footer .copyright {
 .partners img.naturelink {
   margin-top: -20px;
 }
-/* ✅ Responsive Design */
 @media (max-width: 768px) {
   .partners {
     flex-direction: column;
     align-items: center;
   }
   .partners .company {
-    width: 90%; /* or 100% for full width */
+    width: 90%;
     margin-bottom: 30px;
   }
 }

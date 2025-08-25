@@ -4,10 +4,8 @@
 
 <div class="contacts">
 
-  <!-- Heading -->
-  <h1 class="contacts-heading">NEED A WATER TREATMENT SOLUTION?!</h1>
+  <h1 class="contacts-heading">NEED A WATER TREATMENT SOLUTION?</h1>
 
-  <!-- Contact Info + Message Form side by side -->
   <div class="info-and-form">
     <!-- Left: Contact Info -->
     <div class="contact-info">
@@ -32,8 +30,7 @@
 
     <!-- Right: Message Form -->
     <div class="modal">
-      <h2>Request a FREE quotation!</h2>
-      <h3>SEND US A MESSAGE</h3>
+      <h2>Request a FREE quotation! Send us a message.</h2>
       <p>Our team replies within 1 business day</p>
       <form action="{% url 'contacts:create_message' %}" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
