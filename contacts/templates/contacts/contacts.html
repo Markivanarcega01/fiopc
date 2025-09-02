@@ -4,10 +4,31 @@
 
 <div class="contacts">
 
-  <h1 class="contacts-heading">NEED A WATER TREATMENT SOLUTION?</h1>
+  <h1 class="contacts-heading">NEED A WATER-TREATMENT SOLUTION?</h1>
 
   <div class="info-and-form">
     <!-- Left: Contact Info -->
+    <div class="modal">
+      <h2>Request a FREE ocular inspection and quotation!</h2>
+      <p>SEND US A MESSAGE</p>
+      <form action="{% url 'contacts:create_message' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-row">
+          <input type="text" placeholder="Full Name" name="full_name" required>
+          <input type="email" placeholder="Email" name="email" required>
+        </div>
+        <div class="form-row">
+          <input type="text" placeholder="Company" name="company" required>
+          <input type="text" placeholder="Position" name="position" required>
+        </div>
+        <textarea placeholder="Enter your message" name="message"></textarea>
+        <input type="text" placeholder="Contact No." name="contact-num" required style="height:40px;">
+        <button type="submit" class="submit-btn">SUBMIT</button>
+      </form>
+    </div>
+
+    <!-- Right: Message Form -->
+
     <div class="contact-info">
       <h2>CONTACT US</h2>
       <div class="location">
@@ -26,26 +47,6 @@
         <img class="icon" src="{% static 'images/mobile-button.png' %}">
         <p class="mobile-text">+639-776-597-815</p>
       </div>
-    </div>
-
-    <!-- Right: Message Form -->
-    <div class="modal">
-      <h2>Request a FREE quotation! Send us a message.</h2>
-      <p>Our team replies within 1 business day</p>
-      <form action="{% url 'contacts:create_message' %}" method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        <div class="form-row">
-          <input type="text" placeholder="Full Name" name="full_name" required>
-          <input type="email" placeholder="Email" name="email" required>
-        </div>
-        <div class="form-row">
-          <input type="text" placeholder="Company" name="company" required>
-          <input type="text" placeholder="Position" name="position" required>
-        </div>
-        <textarea placeholder="Enter your message" name="message"></textarea>
-        <input type="text" placeholder="Contact No." name="contact-num" required style="height:40px;">
-        <button type="submit" class="submit-btn">SUBMIT</button>
-      </form>
     </div>
   </div>
 

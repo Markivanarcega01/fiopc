@@ -3,8 +3,10 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <title>FIOPC</title>
   {% load static %}
+  <link rel="icon" type="image/png" href="{% static 'images/icon.ico' %}">
 </head>
 
 <body>
@@ -23,16 +25,16 @@
         <li class="dropdown">
           <a class="disabled" href="#">Services</a>
           <ul class="dropdown-menu">
-            <li><a href="{% url 'services:consulting-services' %}">Consulting Services</a></li>
+            <li><a href="{% url 'services:consulting-services' %}">Engineering and Consulting Services</a></li>
             <li><a href="{% url 'services:design-and-build' %}">Design and Build</a></li>
-            <li><a href="{% url 'services:engineering-services' %}">Engineering Services</a></li>
+            <li><a href="{% url 'services:engineering-services' %}">Support Service and Regulatory Assistance</a></li>
             <li><a href="{% url 'services:operations-and-maintenance' %}">Operations and Maintenance</a></li>
             <li><a href="{% url 'services:rehabilitation' %}">Rehabilitation</a></li>
             <li><a href="{% url 'services:technology-upgrade' %}">Technology Upgrade</a></li>
           </ul>
         </li>
-        <li><a href="{% url 'products:index' %}">Products</a></li>
-        {% comment %} <li><a href="{% url 'partners:index' %}">Partners</a></li> {% endcomment %}
+        <li><a href="{% url 'products:index' %}">Technology</a></li>
+        <li><a href="{% url 'partners:index' %}">Projects</a></li>
         {% comment %} <li><a href="{% url 'major_clients:index' %}">Major Clients</a></li> {% endcomment %}
         <li><a href="{% url 'careers:index' %}">Careers</a></li>
         <li><a href="{% url 'licenses_certificates:index' %}">Licenses and Certs</a></li>
@@ -54,7 +56,7 @@
 
   <footer>
     <div class="company-name">
-      <img src="/static/images/footer-title.png" alt="Flow Industries OPC">
+      <img src="{% static 'images/title-updated.png' %}" alt="Flow Industries OPC">
     </div>
     <div class="info">
       <div class="col1">
