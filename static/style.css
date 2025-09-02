@@ -108,6 +108,7 @@ nav .hamburger {
   display: none;
   flex-direction: column;
   margin-right: 16px;
+  margin-top: 8px;
   cursor: pointer;
   gap: 5px;
 }
@@ -121,6 +122,13 @@ nav .hamburger span {
 @media (max-width: 768px) {
   .navbar-body {
     margin-top: -80px;
+  }
+  .navbar-body .logo-container img {
+    width: 95%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   nav .nav-links {
     flex-direction: column;
@@ -291,7 +299,7 @@ footer .copyright {
     flex-direction: column;
   }
   footer .info i {
-    margin-right: 6px;
+    margin: 0;
   }
   footer .col1,
   footer .col2,
