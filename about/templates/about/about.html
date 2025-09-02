@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block maincontent %}
+{% load static %}
 
 <div class="about">
 
@@ -55,5 +56,64 @@
   </div>
 
 </div>
+
+<div class="certs">
+  <div class="title">
+    <p>LICENSES AND CERTIFICATES</p>
+  </div>
+
+  <div class="grid-container">
+    <div class="grid-item">
+      <img src="{% static 'images/barangay-clearance.png' %}" alt="Barangay Clearance">
+      <div class="name">Barangay Clearance</div>
+    </div>
+    <div class="grid-item">
+      <img src="{% static 'images/sec-registration.png' %}" alt="SEC Registration">
+      <div class="name">SEC Registration</div>
+    </div>
+    <div class="grid-item">
+      <img src="{% static 'images/bus-permit.png' %}" alt="Bus Permit">
+      <div class="name">Bus Permit</div>
+    </div>
+    <div class="grid-item">
+      <img src="{% static 'images/bir-cert-1.png' %}" alt="BIR Certificate of Registration">
+      <div class="name">BIR Certificate of Registration (1)</div>
+    </div>
+    <div class="grid-item">
+      <img src="{% static 'images/bir-cert-2.png' %}" alt="BIR Certificate of Registration">
+      <div class="name">BIR Certificate of Registration (2)</div>
+    </div>
+    <div class="grid-item">
+      <img src="{% static 'images/bir-cert-3.png' %}" alt="BIR Certificate of Registration">
+      <div class="name">BIR Certificate of Registration (3)</div>
+    </div>
+  </div>
+
+  <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+  const closeBtn = document.querySelector(".close");
+  document.querySelectorAll(".grid-item img").forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "block";
+      modalImg.src = img.src;
+      modalImg.alt = img.alt;
+    });
+  });
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+</script>
 
 {% endblock %}

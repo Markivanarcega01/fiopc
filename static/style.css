@@ -45,8 +45,7 @@ nav {
 }
 /* LOGO */
 nav .logo-container img {
-  height: 50px;
-  /* margin-left: 16px; */
+  height: 65px;
 }
 /* NAV LINKS */
 nav .nav-links {
@@ -217,6 +216,7 @@ footer .info {
   gap: 20px;
   padding: 20px;
   flex-wrap: wrap;
+  align-items: center;
 }
 footer .info i {
   margin-right: 6px;
@@ -230,6 +230,23 @@ footer .col3 {
   font-weight: 500;
   line-height: 2;
   margin-right: 8px;
+}
+footer .bxs-phone {
+  margin-left: -77px;
+}
+footer .bxl-facebook-square {
+  margin-left: -9px;
+}
+footer .bxs-envelope {
+  margin-left: 50px;
+}
+footer a {
+  text-decoration: none;
+  color: #2a2a2a;
+  transition: all 0.3s ease-in-out;
+}
+footer a:hover {
+  color: #0077b6;
 }
 footer .copyright {
   background-color: #53CBD3;
@@ -599,6 +616,11 @@ footer .copyright {
   object-fit: cover;
   border-radius: 8px;
 }
+.products p {
+  width: 89%;
+  margin-bottom: 8px;
+  text-align: right !important;
+}
 .products .texts {
   width: 80%;
   margin: 32px auto 0 auto;
@@ -684,9 +706,13 @@ footer .copyright {
 }
 .contacts-heading {
   text-align: center;
-  font-size: 28px;
-  margin-bottom: 32px;
+  font-size: 40px;
   color: #0276b5;
+  margin-bottom: -20px;
+}
+.contacts h3 {
+  font-size: 18px;
+  margin-bottom: 40px;
 }
 .contacts .info-and-form {
   display: flex;

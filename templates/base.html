@@ -15,7 +15,7 @@
       {% comment %} Logo {% endcomment %}
       <div class="logo-container">
         <a href="{% url 'home:index' %}" class="logo-container">
-          <img src="{% static 'images/title-updated.png' %}" alt="Flow Industries OPC">
+          <img src="{% static 'images/title.png' %}" alt="Flow Industries OPC">
         </a>
       </div>
 
@@ -37,7 +37,7 @@
         <li><a href="{% url 'partners:index' %}">Projects</a></li>
         {% comment %} <li><a href="{% url 'major_clients:index' %}">Major Clients</a></li> {% endcomment %}
         <li><a href="{% url 'careers:index' %}">Careers</a></li>
-        <li><a href="{% url 'licenses_certificates:index' %}">Licenses and Certs</a></li>
+        {% comment %} <li><a href="{% url 'licenses_certificates:index' %}">Licenses and Certs</a></li> {% endcomment %}
         <li><a href="{% url 'about:index' %}">About</a></li>
         <li><a href="{% url 'contacts:index' %}">Contact</a></li>
       </ul>
@@ -56,19 +56,19 @@
 
   <footer>
     <div class="company-name">
-      <img src="{% static 'images/title-updated.png' %}" alt="Flow Industries OPC">
+      <img src="{% static 'images/title.png' %}" alt="Flow Industries OPC">
     </div>
     <div class="info">
       <div class="col1">
         <i class='bx bxs-phone'></i>(02) 8296 2844<br>
-        <i class='bx bxs-mobile'></i>+639-776-597-815
+        <i class='bx bxs-envelope'></i><a href="mailto:flowindustriesopc.@gmail.com">flowindustriesopc.@gmail.com</a>
       </div>
       <div class="col2">
-        <i class='bx bxs-map'></i>Unit F 6/F Westgate Tower Condo, Investment Dr., Madrigal Business Park, Ayala-Alabang, Muntinlupa 1780
+        <i class='bx bxs-map'></i><a href="https://maps.app.goo.gl/uMwvVFSqtcEdNKKR9">Unit F 6/F Westgate Tower Condo, Investment Dr., Madrigal Business Park, Ayala-Alabang, Muntinlupa 1780</a>
       </div>
       <div class="col3">
-        <i class='bx bxl-linkedin-square' ></i>Flow Industries OPC<br>
-        <i class='bx bxl-facebook-square' ></i>FlowIndustriesOPC
+        <i class='bx bxl-linkedin-square' ></i><a href="https://www.linkedin.com/company/flow-industries/">Flow Industries OPC</a><br>
+        <i class='bx bxl-facebook-square' ></i><a href="https://www.facebook.com/share/172FWqAWTn/">FlowIndustriesOPC</a>
       </div>
     </div>
     <div class="copyright">
