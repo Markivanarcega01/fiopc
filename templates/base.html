@@ -54,7 +54,7 @@
   {% block maincontent%}
   {% endblock %}
 
-  <footer>
+  {% comment %} <footer>
     <div class="company-name">
       <img src="{% static 'images/title.png' %}" alt="Flow Industries OPC">
     </div>
@@ -72,9 +72,34 @@
       </div>
     </div>
     <div class="copyright">
-      <p>Copyright 2025 &copy; FLOW INDUSTRIES OPC. All rights reserved.</p>
+      Copyright 2025 &copy; FLOW INDUSTRIES OPC. All rights reserved.
+    </div>
+  </footer> {% endcomment %}
+
+  <footer>
+    <div class="columns">
+      <div class="column-1">
+        <img src="{% static 'images/title.png' %}" alt="Flow Industries OPC">
+      </div>
+      <div class="column-2">
+        <i class='bx bxs-phone'></i>(02) 8296 2844<br>
+        <i class='bx bxs-envelope'></i> <a href="mailto:flowindustriesopc.@gmail.com">flowindustriesopc.@gmail.com</a>
+      </div>
+      <div class="column-3">
+        <i class='bx bxs-map'></i> <a href="https://maps.app.goo.gl/uMwvVFSqtcEdNKKR9">Unit F 6/F Westgate Tower Condo, Investment Dr., Madrigal Business Park, Ayala-Alabang, Muntinlupa 1780</a>
+      </div>
+      <div class="column-4">
+        <i class='bx bxl-linkedin-square'></i> <a href="https://www.linkedin.com/company/flow-industries/">Flow Industries OPC</a><br>
+        <i class='bx bxl-facebook-square'></i> <a href="https://www.facebook.com/share/172FWqAWTn/">FlowIndustriesOPC</a>
+      </div>
+    </div>
+    <div class="copyright">
+      <strong>
+        Copyright 2025 &copy; FLOW INDUSTRIES OPC. All rights reserved.
+      </strong>
     </div>
   </footer>
+
 
   <button id="backToTopBtn" title="Go to top">↑</button>
 

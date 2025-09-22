@@ -201,7 +201,7 @@ nav .hamburger span {
 }
 
 /* - - - - - FOOTER - - - - - */
-footer {
+/* footer {
   margin: 64px 0 0 0;
   width: 100%;
   height: 240px;
@@ -286,7 +286,7 @@ footer .copyright {
     margin-top: -20px;
   }
 }
-/* full mobile view */
+/* full mobile view */ /*
 @media (max-width: 814px) {
   footer {
     height: 350px;
@@ -318,6 +318,67 @@ footer .copyright {
 @media (max-width: 441px) {
   footer .info .col2 {
     margin: 12px 0;
+  }
+} */
+footer {
+  background: #53CBD3;
+}
+footer .columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 32px 16px;
+}
+footer .column-1,
+footer .column-2,
+footer .column-3,
+footer .column-4 {
+  padding: 16px 8px;
+  margin: auto;
+}
+footer .column-1 {
+  width: 32%;
+}
+footer .column-2 {
+  width: 23%;
+}
+footer .column-3 {
+  width: 38%;
+}
+footer .column-4 {
+  width: 18%;
+}
+footer img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer a {
+  text-decoration: none;
+  color: #2a2a2a;
+}
+footer a:hover {
+  color: #5e5e5e;
+}
+footer .copyright {
+  padding-bottom: 12px;
+  text-align: center;
+  width: 100%;
+}
+@media (max-width: 650px) {
+  footer .columns {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  footer .column-1,
+  footer .column-2,
+  footer .column-3,
+  footer .column-4 {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -570,8 +631,9 @@ footer .copyright {
   gap: 64px;
   padding: 20px;
   justify-content: center;
+  text-align: justify;
   width: 80%;
-  margin: 0 auto 32px auto;
+  margin: 0 auto;
 }
 .products .img-container {
   width: 100%;
@@ -625,13 +687,19 @@ footer .copyright {
   border-radius: 8px;
 }
 .products p {
-  width: 89%;
+  width: 100%;
   margin-bottom: 8px;
-  text-align: right !important;
+  /* text-align: right !important; */
 }
 .products .texts {
   width: 80%;
   margin: 32px auto 0 auto;
+}
+.products .source {
+  width: 80%;
+  margin: 0 auto;
+  padding-left: 8px;
+  text-align: left;
 }
 .products .mobile-view {
   display: none;
@@ -823,6 +891,7 @@ footer .copyright {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2rem;
 }
 .contacts iframe {
   width: 100%;
@@ -934,6 +1003,10 @@ footer .copyright {
   align-items: center;
   margin: 32px auto;
 }
+.services img {
+  width: auto;
+  height: 500px;
+}
 .services .key-advantages {
   font-size: 20px;
   font-weight: bold;
@@ -978,7 +1051,9 @@ footer .copyright {
   top: 110px;
   }
   .services img {
-    width: 95%;
+    padding: 0 16px;
+    height: 200px;
+    width: auto;
   }
 }
 
@@ -1060,6 +1135,7 @@ footer .copyright {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: justify;
 }
 .home .text-content h2 {
   font-size: 24px;
